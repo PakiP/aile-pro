@@ -36,7 +36,7 @@ class App extends Component{
                 </div>
                 <div className="conent">
                     <Welcome/>
-                    {/*<Goods list={GOODS}/>*/}
+                    <Goods list={GOODS}/>
                 </div>
             </div>
         );
