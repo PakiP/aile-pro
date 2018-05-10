@@ -1,7 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Nav from './component/nav';
+import Welcome from './page/welcome';
+import Goods from './page/goods';
+/*import logo from './logo.svg';*/
 import './App.css';
 
+const LIST =[{
+    text: 'welcome',
+    url: '/welcome'
+}, {
+    text: 'goods',
+    url: '/goods'
+}];
+
+const GOODS = [{
+    name: 'iPhone 7',
+    price: '6999',
+    amount: 37
+}, {
+    name: 'iPad',
+    price: '3488',
+    amount: 82
+}, {
+    name: 'Macboos Pro',
+    price: '11888',
+    amount: 15
+}];
+
+class App extends Component{
+    render() {
+        return (
+            <div className="App">
+                <div className="nav_bar">
+                    <Nav list={LIST}/>
+                </div>
+                <div className="conent">
+                    <Welcome/>
+                    {/*<Goods list={GOODS}/>*/}
+                </div>
+            </div>
+        );
+    }
+}
+
+/*
 class App extends Component {
   render() {
     return (
@@ -17,5 +59,6 @@ class App extends Component {
     );
   }
 }
+*/
 
 export default App;
