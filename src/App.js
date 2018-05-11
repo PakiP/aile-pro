@@ -4,6 +4,7 @@ import Welcome from './page/welcome';
 import Goods from './page/goods';
 /*import logo from './logo.svg';*/
 import './App.css';
+import {Route} from 'react-router-dom';
 
 const LIST =[{
     text: 'welcome',
@@ -13,7 +14,7 @@ const LIST =[{
     url: '/goods'
 }];
 
-const GOODS = [{
+/*const GOODS = [{
     name: 'iPhone 7',
     price: '6999',
     amount: 37
@@ -25,7 +26,7 @@ const GOODS = [{
     name: 'Macboos Pro',
     price: '11888',
     amount: 15
-}];
+}];*/
 
 class App extends Component{
     render() {
@@ -35,8 +36,8 @@ class App extends Component{
                     <Nav list={LIST}/>
                 </div>
                 <div className="conent">
-                    <Welcome/>
-                    <Goods list={GOODS}/>
+                    <Route path='/welcome' component={Welcome} />
+                    <Route path='/goods' component={Goods}/>
                 </div>
             </div>
         );
